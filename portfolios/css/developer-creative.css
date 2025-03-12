@@ -1116,6 +1116,7 @@ footer {
     .timeline-dot {
         left: 10px;
         right: auto;
+        z-index: 2;
     }
     
     .timeline-item:nth-child(odd) .timeline-dot,
@@ -1157,6 +1158,22 @@ footer {
     
     .btn {
         padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+    
+    .timeline-content {
+        padding: 15px;
+    }
+    
+    .timeline-title {
+        font-size: 1.1rem;
+    }
+    
+    .timeline-description ul {
+        padding-left: 15px;
+    }
+    
+    .timeline-description li {
         font-size: 0.9rem;
     }
 }

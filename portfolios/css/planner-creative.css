@@ -484,6 +484,7 @@ nav.scrolled .nav-links a {
     background-color: white;
     box-shadow: var(--box-shadow);
     animation: fadeIn 0.5s ease forwards;
+    transition: opacity 0.3s ease;
 }
 
 .experience-date {
@@ -510,6 +511,14 @@ nav.scrolled .nav-links a {
 .experience-description {
     margin-bottom: 30px;
     color: var(--gray-color);
+}
+
+.experience-description ul {
+    padding-left: 20px;
+}
+
+.experience-description li {
+    margin-bottom: 10px;
 }
 
 .experience-skills {
@@ -1046,6 +1055,10 @@ footer {
     .about-image-container {
         order: -1;
     }
+    
+    .experience-content {
+        margin-top: 30px;
+    }
 }
 
 @media (max-width: 768px) {
@@ -1091,6 +1104,36 @@ footer {
     .section-title {
         font-size: 2rem;
     }
+    
+    .experience-tab {
+        padding: 15px;
+    }
+    
+    .tab-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+    }
+    
+    .tab-info h3 {
+        font-size: 1rem;
+    }
+    
+    .tab-info p {
+        font-size: 0.8rem;
+    }
+    
+    .experience-content {
+        padding: 20px;
+    }
+    
+    .experience-role {
+        font-size: 1.5rem;
+    }
+    
+    .experience-description ul {
+        padding-left: 15px;
+    }
 }
 
 @media (max-width: 576px) {
@@ -1113,5 +1156,28 @@ footer {
     
     .section-title {
         font-size: 1.8rem;
+    }
+    
+    .experience-tab {
+        padding: 12px;
+        gap: 10px;
+    }
+    
+    .tab-icon {
+        width: 35px;
+        height: 35px;
+        font-size: 1rem;
+    }
+    
+    .experience-role {
+        font-size: 1.3rem;
+    }
+    
+    .experience-company {
+        font-size: 1rem;
+    }
+    
+    .experience-description li {
+        font-size: 0.9rem;
     }
 }
