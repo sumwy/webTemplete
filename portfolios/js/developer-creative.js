@@ -47,6 +47,19 @@ window.addEventListener('scroll', () => {
     }
 });
 
+// 타임라인 아이템에 clearfix 클래스 적용
+document.addEventListener('DOMContentLoaded', () => {
+    const timelineItems = document.querySelectorAll('.timeline-item');
+    timelineItems.forEach(item => {
+        // clearfix 클래스가 이미 있는지 확인
+        if (!item.querySelector('.clearfix')) {
+            const clearfix = document.createElement('div');
+            clearfix.className = 'clearfix';
+            item.appendChild(clearfix);
+        }
+    });
+});
+
 // 프로젝트 필터링
 const projectFilters = document.querySelectorAll('.project-filter');
 

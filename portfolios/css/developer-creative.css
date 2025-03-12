@@ -509,9 +509,9 @@ header.scrolled {
     margin-bottom: 0;
 }
 
-.clearfix {
-    clear: both;
+.clearfix::after {
     content: "";
+    clear: both;
     display: table;
 }
 
