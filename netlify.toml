@@ -1,14 +1,30 @@
 [build]
   publish = "/"
 
-# 모든 경로를 index.html로 리다이렉트하여 SPA 라우팅 지원
+# 정적 파일은 리다이렉트하지 않음
 [[redirects]]
-  from = "/*"
-  to = "/index.html"
+  from = "/portfolios/css/*"
+  to = "/portfolios/css/:splat"
+  status = 200
+
+[[redirects]]
+  from = "/portfolios/js/*"
+  to = "/portfolios/js/:splat"
+  status = 200
+
+[[redirects]]
+  from = "/assets/*"
+  to = "/assets/:splat"
   status = 200
 
 # 이미지 API 리다이렉트 설정
 [[redirects]]
   from = "/api/placeholder/*"
   to = "https://via.placeholder.com/:splat"
+  status = 200
+
+# 모든 경로를 index.html로 리다이렉트하여 SPA 라우팅 지원 (정적 파일 제외)
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
   status = 200 

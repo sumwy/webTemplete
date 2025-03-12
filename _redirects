@@ -1,3 +1,9 @@
 # Netlify 리다이렉트 규칙
-# SPA 라우팅을 위한 설정
+# 정적 파일은 리다이렉트하지 않음
+/portfolios/css/*  /portfolios/css/:splat  200
+/portfolios/js/*   /portfolios/js/:splat   200
+/assets/*          /assets/:splat          200
+/api/placeholder/* https://via.placeholder.com/:splat 200
+
+# SPA 라우팅을 위한 설정 (정적 파일 제외)
 /*    /index.html   200 
