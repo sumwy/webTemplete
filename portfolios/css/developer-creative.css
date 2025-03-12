@@ -149,6 +149,41 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--bg-color);
 }
 
+/* 뒤로가기 헤더 스타일 */
+.back-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(15, 18, 34, 0.9);
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2000; /* 기존 헤더보다 높은 z-index 값 */
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+}
+
+.back-button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--text-color);
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.back-button:hover {
+    color: var(--secondary-color);
+}
+
+.portfolio-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
 /* 헤더 및 네비게이션 */
 header {
     position: fixed;
@@ -160,6 +195,10 @@ header {
     backdrop-filter: blur(10px);
     z-index: 1000;
     transition: var(--transition);
+}
+
+#header {
+    margin-top: 60px;
 }
 
 header.scrolled {
