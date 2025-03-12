@@ -1,3 +1,35 @@
+ /* 뒤로가기 헤더 스타일 수정 */
+ .back-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    backdrop-filter: blur(10px);
+}
+
+/* 네비게이션 스타일 수정 */
+nav {
+    margin-top: 60px;
+}
+
+/* 프로필 헤더 스타일 수정 */
+.profile-header {
+    padding: 120px 0 50px;
+    text-align: center;
+}
+
+/* 컨테이너 상단 여백 추가 */
+.container {
+    padding-top: 20px;
+}
+
 /* 전체 스타일 */
 * {
     margin: 0;
