@@ -50,11 +50,25 @@ window.addEventListener('scroll', () => {
 // 타임라인 아이템에 clearfix 클래스 적용 및 레이아웃 수정
 document.addEventListener('DOMContentLoaded', () => {
     const timelineItems = document.querySelectorAll('.timeline-item');
+    const experienceSection = document.getElementById('experience');
+    const projectsSection = document.getElementById('projects');
+    
+    // 경력 섹션과 프로젝트 섹션의 z-index 설정
+    if (experienceSection && projectsSection) {
+        experienceSection.style.position = 'relative';
+        experienceSection.style.zIndex = '1';
+        projectsSection.style.position = 'relative';
+        projectsSection.style.zIndex = '2';
+    }
     
     // 모바일 화면 여부 확인
     const isMobile = window.innerWidth <= 768;
     
     timelineItems.forEach((item, index) => {
+        // z-index 설정으로 타임라인 아이템이 다른 섹션과 겹치지 않도록 함
+        item.style.position = 'relative';
+        item.style.zIndex = '3';
+        
         // clearfix 클래스가 이미 있는지 확인
         if (!item.querySelector('.clearfix')) {
             const clearfix = document.createElement('div');
@@ -90,6 +104,12 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
     });
+    
+    // 마지막 타임라인 아이템에 추가 마진 적용
+    if (timelineItems.length > 0) {
+        const lastItem = timelineItems[timelineItems.length - 1];
+        lastItem.style.marginBottom = '50px';
+    }
 });
 
 // 화면 크기 변경 시 타임라인 레이아웃 업데이트
