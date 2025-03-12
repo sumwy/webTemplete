@@ -1,0 +1,30 @@
+/* ===== 돌아가기 버튼 스타일 시작 ===== */
+.back-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px 20px;
+    background-color: #fff;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.back-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #333;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.back-button:hover {
+    color: #007bff;
+    transform: translateX(-5px);
+}
+
+nav {
+    margin-top: 50px; /* 돌아가기 버튼 헤더 높이만큼 여백 추가 */
+}
+/* ===== 돌아가기 버튼 스타일 끝 ===== */ 

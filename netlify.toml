@@ -1,0 +1,14 @@
+[build]
+  publish = "/"
+
+# 모든 경로를 index.html로 리다이렉트하여 SPA 라우팅 지원
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# 이미지 API 리다이렉트 설정
+[[redirects]]
+  from = "/api/placeholder/*"
+  to = "https://via.placeholder.com/:splat"
+  status = 200 
