@@ -503,6 +503,8 @@ header.scrolled {
     position: relative;
     margin-bottom: 80px;
     width: 100%;
+    display: block;
+    clear: both;
 }
 
 .timeline-item:last-child {
@@ -1088,41 +1090,30 @@ footer {
     
     .timeline-content {
         width: calc(100% - 60px);
-        float: right;
-        text-align: left;
+        float: right !important;
+        text-align: left !important;
+        margin-left: 60px;
     }
     
     .timeline-item:nth-child(odd) .timeline-content {
-        float: right;
-        text-align: left;
+        float: right !important;
+        text-align: left !important;
     }
     
     .timeline-date {
         width: auto;
         position: relative;
         top: 0;
-        left: 0;
-        right: 0;
+        left: 0 !important;
+        right: auto !important;
         margin-bottom: 15px;
         display: inline-block;
     }
     
-    .timeline-item:nth-child(odd) .timeline-date,
-    .timeline-item:nth-child(even) .timeline-date {
-        left: 0;
-        right: auto;
-    }
-    
     .timeline-dot {
-        left: 10px;
-        right: auto;
+        left: 10px !important;
+        right: auto !important;
         z-index: 2;
-    }
-    
-    .timeline-item:nth-child(odd) .timeline-dot,
-    .timeline-item:nth-child(even) .timeline-dot {
-        left: 10px;
-        right: auto;
     }
     
     .projects-grid {
@@ -1163,6 +1154,8 @@ footer {
     
     .timeline-content {
         padding: 15px;
+        margin-left: 40px;
+        width: calc(100% - 40px);
     }
     
     .timeline-title {

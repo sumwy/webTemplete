@@ -47,15 +47,77 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// 타임라인 아이템에 clearfix 클래스 적용
+// 타임라인 아이템에 clearfix 클래스 적용 및 레이아웃 수정
 document.addEventListener('DOMContentLoaded', () => {
     const timelineItems = document.querySelectorAll('.timeline-item');
-    timelineItems.forEach(item => {
+    
+    // 모바일 화면 여부 확인
+    const isMobile = window.innerWidth <= 768;
+    
+    timelineItems.forEach((item, index) => {
         // clearfix 클래스가 이미 있는지 확인
         if (!item.querySelector('.clearfix')) {
             const clearfix = document.createElement('div');
             clearfix.className = 'clearfix';
             item.appendChild(clearfix);
+        }
+        
+        // 모바일 화면에서는 모든 아이템을 오른쪽으로 정렬
+        if (isMobile) {
+            const content = item.querySelector('.timeline-content');
+            content.style.float = 'right';
+            content.style.textAlign = 'left';
+            
+            const dot = item.querySelector('.timeline-dot');
+            dot.style.left = '10px';
+            dot.style.right = 'auto';
+        } 
+        // 데스크톱에서는 홀수/짝수에 따라 좌우 정렬
+        else {
+            const content = item.querySelector('.timeline-content');
+            const dot = item.querySelector('.timeline-dot');
+            
+            if (index % 2 === 0) { // 홀수 아이템 (0부터 시작하므로)
+                content.style.float = 'left';
+                content.style.textAlign = 'right';
+                dot.style.right = '-50px';
+                dot.style.left = 'auto';
+            } else { // 짝수 아이템
+                content.style.float = 'right';
+                content.style.textAlign = 'left';
+                dot.style.left = '-50px';
+                dot.style.right = 'auto';
+            }
+        }
+    });
+});
+
+// 화면 크기 변경 시 타임라인 레이아웃 업데이트
+window.addEventListener('resize', () => {
+    const timelineItems = document.querySelectorAll('.timeline-item');
+    const isMobile = window.innerWidth <= 768;
+    
+    timelineItems.forEach((item, index) => {
+        const content = item.querySelector('.timeline-content');
+        const dot = item.querySelector('.timeline-dot');
+        
+        if (isMobile) {
+            content.style.float = 'right';
+            content.style.textAlign = 'left';
+            dot.style.left = '10px';
+            dot.style.right = 'auto';
+        } else {
+            if (index % 2 === 0) {
+                content.style.float = 'left';
+                content.style.textAlign = 'right';
+                dot.style.right = '-50px';
+                dot.style.left = 'auto';
+            } else {
+                content.style.float = 'right';
+                content.style.textAlign = 'left';
+                dot.style.left = '-50px';
+                dot.style.right = 'auto';
+            }
         }
     });
 });
