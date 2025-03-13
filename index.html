@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Spark | AI 활용 포트폴리오</title>
+    <title>AI Spark | AI 활용 허브</title>
     
     <!-- 파비콘 설정 -->
     <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/apple-touch-icon.png">
@@ -15,11 +15,11 @@
     <meta name="theme-color" content="#1D1D1D">
     
     <!-- SEO 메타 태그 추가 -->
-    <meta name="description" content="AI 기술을 활용한 방법을 공유하고 수익화까지 도와드리는 포트폴리오">
-    <meta name="keywords" content="AI, AI 활용, 포트폴리오, 콘텐츠 제작, 웹 템플릿, 디지털노마드">
+    <meta name="description" content="AI 기술을 활용한 방법을 공유하고 수익화까지 도와드립니다">
+    <meta name="keywords" content="AI, GPTs, 디지털노마드, 콘텐츠 제작, 자동화 도구, AI 활용법">
     
     <!-- Open Graph 태그 -->
-    <meta property="og:title" content="AI Spark | AI 활용 포트폴리오">
+    <meta property="og:title" content="AI Spark | AI 활용 허브">
     <meta property="og:description" content="AI 기술을 활용한 방법을 공유하고 수익화까지 도와드립니다">
     <meta property="og:image" content="assets/images/chrome-extension.png">
     <meta property="og:type" content="website">
@@ -36,201 +36,403 @@
     <link rel="stylesheet" href="assets/css/ai-spark-styles.css">
 </head>
 <body>
-    <!-- 헤더 -->
-    <header>
-        <div class="container header-container">
+    <!-- 네비게이션 바 -->
+    <nav class="navbar">
+        <div class="container nav-container">
             <a href="/" class="logo">
                 <i class="fas fa-bolt"></i> AI <span>Spark</span>
             </a>
             <div class="nav-links">
-                <a href="#portfolio" class="nav-link">포트폴리오</a>
-                <a href="/ai-spark" class="nav-link">AI 활용</a>
-                <a href="#contact" class="nav-link">연락처</a>
+                <a href="#features" class="nav-link">특징</a>
+                <a href="#tools" class="nav-link">AI 도구</a>
+                <a href="/portfolio" class="nav-link">포트폴리오</a>
+                <a href="#community" class="nav-link">커뮤니티</a>
+                <a href="#newsletter" class="nav-link">뉴스레터</a>
             </div>
+            <a href="#cta" class="btn">시작하기</a>
             <button class="mobile-toggle">
                 <i class="fas fa-bars"></i>
             </button>
         </div>
-    </header>
+    </nav>
 
-    <!-- 히어로 섹션 -->
+    <!-- 헤더 섹션 -->
     <section class="hero">
-        <div class="container">
+        <div class="container hero-container">
             <div class="hero-content">
                 <div class="hero-subtitle">
-                    <i class="fas fa-rocket"></i> AI 활용 전문가
+                    <i class="fas fa-rocket"></i> AI 활용의 새로운 시대
                 </div>
                 <h1 class="hero-title">
                     AI로 <span>아이디어</span>를 실현하세요
                 </h1>
                 <p class="hero-description">
                     무수히 많은 아이디어를 AI와 함께 실현하세요. AI Spark는 AI를 활용하고 사용하는 방법을 공유하고, 
-                    더 나아가 수익화하는 방법까지 알려드립니다. 포트폴리오 제작부터 AI 활용까지, 당신의 디지털 여정을 함께합니다.
+                    더 나아가 수익화하는 방법까지 알려드립니다.
                 </p>
-                <div class="hero-buttons">
-                    <a href="#portfolio" class="btn">포트폴리오 보기</a>
-                    <a href="/ai-spark" class="btn btn-outline">AI 활용 살펴보기</a>
+                <div class="hero-cta">
+                    <a href="#tools" class="btn">AI 도구 살펴보기</a>
+                    <a href="#community" class="btn btn-outline">커뮤니티 참여하기</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">6+</div>
+                        <div class="stat-label">맞춤형 GPTs</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">100%</div>
+                        <div class="stat-label">AI 활용 노하우</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">∞</div>
+                        <div class="stat-label">무한한 가능성</div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- 포트폴리오 섹션 -->
-    <section id="portfolio" class="section">
-        <div class="container">
-            <h2 class="section-title">포트폴리오 템플릿</h2>
-            <p class="section-subtitle">다양한 직군을 위한 고품질 포트폴리오 템플릿을 제공합니다.</p>
-            
-            <!-- 스타일 필터 -->
-            <div class="filter-container">
-                <button class="filter-btn active" data-filter="all">모든 스타일</button>
-                <button class="filter-btn" data-filter="minimalist">미니멀리스트</button>
-                <button class="filter-btn" data-filter="modern">모던</button>
-                <button class="filter-btn" data-filter="creative">크리에이티브</button>
-            </div>
-            
-            <div class="portfolio-grid">
-                <!-- 개발자 포트폴리오 - 미니멀리스트 -->
-                <div class="portfolio-card" data-category="developer minimalist">
-                    <div class="card-img">
-                        <img src="assets/images/developer_minimal.png" alt="개발자 포트폴리오 - 미니멀리스트">
+            <div class="hero-image">
+                <img src="assets/images/chrome-extension.png" alt="AI Spark 활용 이미지" class="hero-img">
+                <div class="floating-icons">
+                    <div class="floating-icon icon-1">
+                        <i class="fas fa-robot"></i>
                     </div>
-                    <div class="card-content">
-                        <h3>개발자 포트폴리오</h3>
-                        <p>미니멀리스트 스타일의 전문적인 개발자 포트폴리오 템플릿입니다.</p>
-                        <a href="/portfolios/developer-minimalist" class="btn">템플릿 보기</a>
+                    <div class="floating-icon icon-2">
+                        <i class="fas fa-code"></i>
                     </div>
-                </div>
-                
-                <!-- 개발자 포트폴리오 - 모던 -->
-                <div class="portfolio-card" data-category="developer modern">
-                    <div class="card-img">
-                        <img src="assets/images/developer_modern.png" alt="개발자 포트폴리오 - 모던">
-                    </div>
-                    <div class="card-content">
-                        <h3>개발자 포트폴리오</h3>
-                        <p>모던한 디자인의 개발자 포트폴리오 템플릿으로 기술 스택을 효과적으로 보여줍니다.</p>
-                        <a href="/portfolios/developer-modern" class="btn">템플릿 보기</a>
-                    </div>
-                </div>
-                
-                <!-- 개발자 포트폴리오 - 크리에이티브 -->
-                <div class="portfolio-card" data-category="developer creative">
-                    <div class="card-img">
-                        <img src="assets/images/developer_creative.png" alt="개발자 포트폴리오 - 크리에이티브">
-                    </div>
-                    <div class="card-content">
-                        <h3>개발자 포트폴리오</h3>
-                        <p>창의적인 디자인의 개발자 포트폴리오 템플릿으로 독특한 개성을 표현합니다.</p>
-                        <a href="/portfolios/developer-creative" class="btn">템플릿 보기</a>
-                    </div>
-                </div>
-                
-                <!-- 기획자 포트폴리오 - 미니멀리스트 -->
-                <div class="portfolio-card" data-category="planner minimalist">
-                    <div class="card-img">
-                        <img src="assets/images/planner_minimal.png" alt="기획자 포트폴리오 - 미니멀리스트">
-                    </div>
-                    <div class="card-content">
-                        <h3>기획자 포트폴리오</h3>
-                        <p>미니멀리스트 스타일로 제품 기획 과정과 성과를 효과적으로 보여주는 템플릿입니다.</p>
-                        <a href="/portfolios/planner-minimalist" class="btn">템플릿 보기</a>
-                    </div>
-                </div>
-                
-                <!-- 기획자 포트폴리오 - 모던 -->
-                <div class="portfolio-card" data-category="planner modern">
-                    <div class="card-img">
-                        <img src="assets/images/planner_modern.png" alt="기획자 포트폴리오 - 모던">
-                    </div>
-                    <div class="card-content">
-                        <h3>기획자 포트폴리오</h3>
-                        <p>모던한 디자인으로 기획 프로세스와 결과물을 체계적으로 보여주는 템플릿입니다.</p>
-                        <a href="/portfolios/planner-modern" class="btn">템플릿 보기</a>
-                    </div>
-                </div>
-                
-                <!-- 기획자 포트폴리오 - 크리에이티브 -->
-                <div class="portfolio-card" data-category="planner creative">
-                    <div class="card-img">
-                        <img src="assets/images/planner_creative.png" alt="기획자 포트폴리오 - 크리에이티브">
-                    </div>
-                    <div class="card-content">
-                        <h3>기획자 포트폴리오</h3>
-                        <p>창의적인 레이아웃으로 기획자의 아이디어와 프로젝트를 돋보이게 하는 템플릿입니다.</p>
-                        <a href="/portfolios/planner-creative" class="btn">템플릿 보기</a>
-                    </div>
-                </div>
-                
-                <!-- 교사 포트폴리오 - 미니멀리스트 -->
-                <div class="portfolio-card" data-category="teacher minimalist">
-                    <div class="card-img">
-                        <img src="assets/images/teacher_minimal.png" alt="교사 포트폴리오 - 미니멀리스트">
-                    </div>
-                    <div class="card-content">
-                        <h3>교사 포트폴리오</h3>
-                        <p>미니멀리스트 스타일로 교육 철학과 교수법을 효과적으로 보여주는 템플릿입니다.</p>
-                        <a href="/portfolios/teacher-minimalist" class="btn">템플릿 보기</a>
-                    </div>
-                </div>
-                
-                <!-- 교사 포트폴리오 - 모던 -->
-                <div class="portfolio-card" data-category="teacher modern">
-                    <div class="card-img">
-                        <img src="assets/images/teacher_modern.png" alt="교사 포트폴리오 - 모던">
-                    </div>
-                    <div class="card-content">
-                        <h3>교사 포트폴리오</h3>
-                        <p>모던한 디자인으로 교육 성과와 학생 피드백을 효과적으로 보여주는 템플릿입니다.</p>
-                        <a href="/portfolios/teacher-modern" class="btn">템플릿 보기</a>
+                    <div class="floating-icon icon-3">
+                        <i class="fas fa-magic"></i>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 연락처 섹션 -->
-    <section id="contact" class="contact">
+    <!-- 특징 섹션 -->
+    <section id="features" class="features">
         <div class="container">
             <div class="section-title">
-                <h2 class="section-heading">연락처</h2>
+                <h2 class="section-heading">AI 활용의 핵심 기능</h2>
                 <p class="section-subtitle">
-                    포트폴리오 제작이나 AI 활용에 관한 문의사항이 있으시면 언제든지 연락해주세요.
+                    AI Spark는 다양한 아이디어를 AI와 함께 실현하고, AI 활용 방법을 공유하며 수익화까지 도와드립니다.
                 </p>
             </div>
-            
-            <div style="text-align: center; margin-top: 30px;">
-                <p style="margin-bottom: 10px; color: var(--gray);">이메일: <a href="mailto:thspade@gmail.com" style="color: var(--primary);">thspade@gmail.com</a></p>
-                <p style="margin-bottom: 10px; color: var(--gray);">전화번호: <a href="https://open.kakao.com/o/swYj9llh" style="color: var(--primary);">오픈카톡방</a></p>
+            <div class="features-grid">
+                <div class="feature-card animate-fadeUp">
+                    <div class="feature-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3 class="feature-title">AI 활용 노하우</h3>
+                    <p class="feature-description">
+                        GPTs와 다양한 AI 도구를 활용하여 아이디어를 실현하는 방법을 공유합니다.
+                    </p>
+                    <div class="feature-stat">
+                        <div class="feature-stat-number">6+</div>
+                        <div class="feature-stat-label">맞춤형 GPTs</div>
+                    </div>
+                </div>
+                <div class="feature-card animate-fadeUp animate-delay-1">
+                    <div class="feature-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h3 class="feature-title">수익화 전략</h3>
+                    <p class="feature-description">
+                        AI를 활용하여 수익을 창출하는 다양한 방법과 전략을 제공합니다.
+                    </p>
+                    <div class="feature-stat">
+                        <div class="feature-stat-number">100%</div>
+                        <div class="feature-stat-label">실용적인 접근법</div>
+                    </div>
+                </div>
+                <div class="feature-card animate-fadeUp animate-delay-2">
+                    <div class="feature-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 class="feature-title">AI 활용 커뮤니티</h3>
+                    <p class="feature-description">
+                        함께 성장하는 AI 활용 노하우를 공유하고 최신 AI 기술 트렌드를 배울 수 있습니다.
+                    </p>
+                    <div class="feature-stat">
+                        <div class="feature-stat-number">∞</div>
+                        <div class="feature-stat-label">무한한 가능성</div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- 푸터 -->
+    <!-- 도구 섹션 -->
+    <section id="tools" class="tools">
+        <div class="container">
+            <div class="section-title">
+                <h2 class="section-heading">AI 도구 & 인사이트</h2>
+                <p class="section-subtitle">
+                    다양한 아이디어를 실현하는 강력한 AI 도구와 인사이트를 제공합니다.
+                </p>
+            </div>
+            <div class="tools-grid">
+                <!-- 블로그 작성 GPTs -->
+                <div class="tool-card animate-fadeUp">
+                    <div class="tool-header">
+                        <div class="tool-header-content">
+                            <h3 class="tool-title">
+                                <i class="fas fa-pen-fancy tool-title-icon"></i>
+                                블로그 작성 GPTs
+                            </h3>
+                            <p class="tool-description">
+                                블로그 글 작성을 위한 키워드 생성부터 콘텐츠 작성까지 도와주는 GPTs 시리즈입니다.
+                            </p>
+                            <div class="tool-features">
+                                <div class="tool-feature">
+                                    <i class="fas fa-check tool-feature-icon"></i>
+                                    <p class="tool-feature-text">관심사 기반 키워드 및 소재 자동 생성</p>
+                                </div>
+                                <div class="tool-feature">
+                                    <i class="fas fa-check tool-feature-icon"></i>
+                                    <p class="tool-feature-text">다양한 스타일의 블로그 콘텐츠 작성</p>
+                                </div>
+                                <div class="tool-feature">
+                                    <i class="fas fa-check tool-feature-icon"></i>
+                                    <p class="tool-feature-text">SEO 최적화 및 수익화 전략 포함</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tool-content">
+                        <div class="tool-links">
+                            <a href="https://chatgpt.com/g/g-6784af5c498c81919c97c2f4cf42069f-beulrogeu-guseong-1dangye-geul-jagseongeul-wihan-kiweodeu-wa-sojaemog-saengseonggi" target="_blank" class="tool-link">
+                                <div class="tool-link-icon">
+                                    <i class="fas fa-lightbulb"></i>
+                                </div>
+                                <div class="tool-link-content">
+                                    <div class="tool-link-title">블로그 구성 1단계 : 글 작성을 위한 키워드 와 소재목 생성기</div>
+                                    <div class="tool-link-subtitle">블로그 글 작성을 위한 키워드와 소재목을 생성합니다.</div>
+                                </div>
+                                <i class="fas fa-chevron-right tool-link-arrow"></i>
+                            </a>
+                            <a href="https://chatgpt.com/g/g-67aea614297c8191a5385ddc140f08c9-ai-spark-beulrogeujagseong-2dangye-paseutel-pingkeu" target="_blank" class="tool-link">
+                                <div class="tool-link-icon">
+                                    <i class="fas fa-paint-brush"></i>
+                                </div>
+                                <div class="tool-link-content">
+                                    <div class="tool-link-title">블로그 구성 2단계 : 파스텔 핑크 스타일</div>
+                                    <div class="tool-link-subtitle">파스텔 핑크 스타일 블로그 작성 2단계 (이미지 생성 기능 포함)</div>
+                                </div>
+                                <i class="fas fa-chevron-right tool-link-arrow"></i>
+                            </a>
+                            <a href="https://chatgpt.com/g/g-67cfe2de26408191a523ccc9896ea486-ai-spark-beulrogeujagseong-2dangye-modeon-seutail" target="_blank" class="tool-link">
+                                <div class="tool-link-icon">
+                                    <i class="fas fa-palette"></i>
+                                </div>
+                                <div class="tool-link-content">
+                                    <div class="tool-link-title">블로그 구성 2단계 : 모던 스타일</div>
+                                    <div class="tool-link-subtitle">모던 스타일 블로그 작성 2단계 (이미지 생성 기능 포함)</div>
+                                </div>
+                                <i class="fas fa-chevron-right tool-link-arrow"></i>
+                            </a>
+                        </div>
+                        <div class="tool-badge">
+                            <p><i class="fas fa-star"></i> 다양한 스타일 지원</p>
+                            <p><i class="fas fa-star"></i> 이미지 생성 기능 포함</p>
+                            <p><i class="fas fa-star"></i> 사용자 인터랙션 최적화</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 수익화 및 개발 GPTs -->
+                <div class="tool-card animate-fadeUp animate-delay-1">
+                    <div class="tool-header">
+                        <div class="tool-header-content">
+                            <h3 class="tool-title">
+                                <i class="fas fa-robot tool-title-icon"></i>
+                                수익화 및 개발 GPTs
+                            </h3>
+                            <p class="tool-description">
+                                블로그 수익화와 개발 지원을 위한 특화된 GPTs 도구입니다.
+                            </p>
+                            <div class="tool-features">
+                                <div class="tool-feature">
+                                    <i class="fas fa-check tool-feature-icon"></i>
+                                    <p class="tool-feature-text">CTA 행동유도 방식의 고수익 글 작성</p>
+                                </div>
+                                <div class="tool-feature">
+                                    <i class="fas fa-check tool-feature-icon"></i>
+                                    <p class="tool-feature-text">파스텔 블루 스타일 블로그 작성</p>
+                                </div>
+                                <div class="tool-feature">
+                                    <i class="fas fa-check tool-feature-icon"></i>
+                                    <p class="tool-feature-text">개발 용어 변환 및 개발 지원</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tool-content">
+                        <div class="tool-links">
+                            <a href="https://chatgpt.com/g/g-67cfe05fed7c8191b2c7e2de7a454b04-ai-spark-beulrogeujagseong-2dangye-paseutel-beulru" target="_blank" class="tool-link">
+                                <div class="tool-link-icon">
+                                    <i class="fas fa-tint"></i>
+                                </div>
+                                <div class="tool-link-content">
+                                    <div class="tool-link-title">블로그 구성 2단계 : 파스텔 블루 스타일</div>
+                                    <div class="tool-link-subtitle">파스텔 블루 스타일 블로그 작성 2단계 (이미지 생성 기능 포함)</div>
+                                </div>
+                                <i class="fas fa-chevron-right tool-link-arrow"></i>
+                            </a>
+                            <a href="https://chatgpt.com/g/g-67be97cb50688191a3557f9c163653cd-beulrogeu-co-gosuig-geul-jagseonggi-cta-yudo" target="_blank" class="tool-link">
+                                <div class="tool-link-icon">
+                                    <i class="fas fa-money-bill-wave"></i>
+                                </div>
+                                <div class="tool-link-content">
+                                    <div class="tool-link-title">블로그 초 고수익 글 작성기 (CTA유도)</div>
+                                    <div class="tool-link-subtitle">수익을 목적으로 하는 CTA 행동유도 방식의 글 작성</div>
+                                </div>
+                                <i class="fas fa-chevron-right tool-link-arrow"></i>
+                            </a>
+                            <a href="https://chatgpt.com/g/g-67ce5a7914388191baf9245d0b97fe23-ai-spark-nuguna-gaebalja" target="_blank" class="tool-link">
+                                <div class="tool-link-icon">
+                                    <i class="fas fa-code"></i>
+                                </div>
+                                <div class="tool-link-content">
+                                    <div class="tool-link-title">AI-Spark : 누구나 개발자</div>
+                                    <div class="tool-link-subtitle">일반 자연어를 전문적인 개발용어로 변환하여 개발 지원</div>
+                                </div>
+                                <i class="fas fa-chevron-right tool-link-arrow"></i>
+                            </a>
+                        </div>
+                        <div class="tool-badge">
+                            <p><i class="fas fa-star"></i> 수익화 전략 최적화</p>
+                            <p><i class="fas fa-star"></i> 다양한 스타일 지원</p>
+                            <p><i class="fas fa-star"></i> 개발 지원 기능</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 커뮤니티 섹션 -->
+    <section id="community" class="community">
+        <div class="container">
+            <div class="section-title">
+                <h2 class="section-heading">AI 활용 커뮤니티</h2>
+                <p class="section-subtitle">
+                    함께 성장하는 AI 활용 커뮤니티에 참여하여 최신 인사이트를 공유하세요.
+                </p>
+            </div>
+            <div class="community-grid">
+                <a href="https://open.kakao.com/o/gI5k3cgh" target="_blank" class="community-card animate-fadeUp">
+                    <div class="community-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <div class="community-content">
+                        <h3 class="community-title">AI 스파크 소통방</h3>
+                        <p class="community-subtitle">실시간 AI 활용 인사이트 공유</p>
+                    </div>
+                </a>
+                <a href="https://www.threads.net/@ucando_ai" target="_blank" class="community-card animate-fadeUp animate-delay-1">
+                    <div class="community-icon">
+                        <i class="fas fa-at"></i>
+                    </div>
+                    <div class="community-content">
+                        <h3 class="community-title">@ucando_ai</h3>
+                        <p class="community-subtitle">디지털 노마드 라이프스타일 공유</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 뉴스레터 섹션 -->
+    <section id="newsletter" class="newsletter">
+        <div class="newsletter-content">
+            <h2 class="newsletter-title">최신 AI 활용 인사이트 받아보기</h2>
+            <p class="newsletter-subtitle">AI 활용과 관련된 최신 정보를 이메일로 받아보세요</p>
+            <form class="newsletter-form" name="email-signup" method="POST" data-netlify="true">
+                <input type="email" name="email" required placeholder="이메일 주소를 입력하세요" class="newsletter-input">
+                <button type="submit" class="newsletter-submit">구독하기 <i class="fas fa-arrow-right"></i></button>
+            </form>
+        </div>
+    </section>
+
+    <!-- 푸터 섹션 -->
     <footer>
         <div class="container">
-            <a href="/" class="footer-logo">
-                <i class="fas fa-bolt"></i> AI <span>Spark</span>
-            </a>
-            
-            <div class="footer-links">
-                <a href="#portfolio" class="footer-link">포트폴리오</a>
-                <a href="/ai-spark" class="footer-link">AI 활용</a>
-                <a href="#contact" class="footer-link">연락처</a>
+            <div class="footer-container">
+                <div>
+                    <a href="/" class="footer-logo">
+                        <i class="fas fa-bolt"></i> AI <span>Spark</span>
+                    </a>
+                    <p class="footer-description">
+                        무수히 많은 아이디어를 AI와 함께 실현하고, AI 활용 방법을 공유하며 수익화까지 도와드립니다.
+                    </p>
+                    <div class="footer-social">
+                        <a href="#" class="footer-social-link">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="footer-social-link">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="footer-social-link">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="#" class="footer-social-link">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="footer-heading">AI 도구</h4>
+                    <ul class="footer-links">
+                        <li class="footer-link">
+                            <a href="#"><i class="fas fa-chevron-right"></i> 블로그 작성 GPTs</a>
+                        </li>
+                        <li class="footer-link">
+                            <a href="#"><i class="fas fa-chevron-right"></i> 수익화 GPTs</a>
+                        </li>
+                        <li class="footer-link">
+                            <a href="#"><i class="fas fa-chevron-right"></i> 개발 지원 GPTs</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-heading">리소스</h4>
+                    <ul class="footer-links">
+                        <li class="footer-link">
+                            <a href="#"><i class="fas fa-chevron-right"></i> 블로그</a>
+                        </li>
+                        <li class="footer-link">
+                            <a href="#"><i class="fas fa-chevron-right"></i> 튜토리얼</a>
+                        </li>
+                        <li class="footer-link">
+                            <a href="#"><i class="fas fa-chevron-right"></i> 가이드</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-heading">회사</h4>
+                    <ul class="footer-links">
+                        <li class="footer-link">
+                            <a href="#"><i class="fas fa-chevron-right"></i> 소개</a>
+                        </li>
+                        <li class="footer-link">
+                            <a href="#"><i class="fas fa-chevron-right"></i> 연락처</a>
+                        </li>
+                        <li class="footer-link">
+                            <a href="#"><i class="fas fa-chevron-right"></i> 개인정보처리방침</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            
-            <div class="footer-social">
-                <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-                <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
-                <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
-                <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+            <div class="footer-bottom">
+                <p>&copy; 2023 AI Spark. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#" class="footer-bottom-link">이용약관</a>
+                    <a href="#" class="footer-bottom-link">개인정보처리방침</a>
+                    <a href="#" class="footer-bottom-link">쿠키 정책</a>
+                </div>
             </div>
-            
-            <p class="copyright">&copy; 2023 AI Spark. All rights reserved.</p>
         </div>
     </footer>
 
-    <!-- 외부 JavaScript 파일 연결 -->
-    <script src="assets/js/main.js"></script>
+    <!-- 자바스크립트 -->
+    <script src="assets/js/ai-spark-main.js"></script>
 </body>
 </html> 
