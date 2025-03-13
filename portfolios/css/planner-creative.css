@@ -518,15 +518,17 @@ nav.scrolled .nav-links a {
 .tab-icon::after {
     content: '';
     position: absolute;
-    top: -5px;
-    right: -5px;
-    width: 15px;
-    height: 15px;
+    top: 50%;
+    right: -6px;
+    width: 12px;
+    height: 12px;
     border-radius: 50%;
     background-color: var(--accent-color);
     opacity: 0;
     transition: var(--transition);
     z-index: 2;
+    transform: translateY(-50%);
+    border: 2px solid white;
 }
 
 .experience-tab.active .tab-icon::after {
