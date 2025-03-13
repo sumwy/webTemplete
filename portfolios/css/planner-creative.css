@@ -489,6 +489,17 @@ nav.scrolled .nav-links a {
     align-items: center;
     justify-content: center;
     font-size: 1.5rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: var(--transition);
+}
+
+.experience-tab:not(.active) .tab-icon {
+    background-color: rgba(255, 51, 102, 0.1);
+    color: var(--primary-color);
+}
+
+.experience-tab:hover .tab-icon {
+    transform: scale(1.1);
 }
 
 .tab-info h3 {
@@ -816,8 +827,24 @@ nav.scrolled .nav-links a {
     background: var(--gradient-bg);
     border-radius: 4px;
     position: relative;
-    width: 0;
     transition: width 1.5s ease;
+}
+
+/* 각 스킬 프로그래스 바에 대한 기본값 설정 */
+.skill-item:nth-child(1) .skill-progress {
+    width: 95%;
+}
+
+.skill-item:nth-child(2) .skill-progress {
+    width: 90%;
+}
+
+.skill-item:nth-child(3) .skill-progress {
+    width: 85%;
+}
+
+.skill-item:nth-child(4) .skill-progress {
+    width: 95%;
 }
 
 /* 연락처 영역 */
