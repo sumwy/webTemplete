@@ -2095,3 +2095,290 @@
         grid-template-columns: 1fr;
     }
   }
+
+  /* 포트폴리오 페이지 스타일 */
+  .back-header {
+    background-color: var(--dark);
+    padding: 1rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+
+  .back-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .back-button {
+    color: var(--light);
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: color 0.3s ease;
+  }
+
+  .back-button:hover {
+    color: var(--primary);
+  }
+
+  .portfolio-title {
+    font-weight: 600;
+    color: var(--light);
+    font-size: 1.1rem;
+  }
+
+  /* 포트폴리오 섹션 */
+  .portfolio-section {
+    padding: 5rem 0;
+    background-color: var(--dark);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .portfolio-section::before {
+    content: '';
+    position: absolute;
+    top: -10%;
+    right: -10%;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(138, 43, 226, 0.2) 0%, rgba(138, 43, 226, 0) 70%);
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  .section-tag {
+    display: inline-block;
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .filter-container {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 2rem 0;
+    flex-wrap: wrap;
+  }
+
+  .filter-btn {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: none;
+    color: var(--light);
+    padding: 0.6rem 1.2rem;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+  }
+
+  .filter-btn:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+
+  .filter-btn.active {
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
+    color: var(--light);
+  }
+
+  .portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+  }
+
+  .portfolio-card {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .portfolio-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+
+  .card-img {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+  }
+
+  .card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+  }
+
+  .portfolio-card:hover .card-img img {
+    transform: scale(1.05);
+  }
+
+  .card-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgba(0, 0, 0, 0.7);
+    color: var(--light);
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+  }
+
+  .card-content {
+    padding: 1.5rem;
+  }
+
+  .card-content h3 {
+    margin-top: 0;
+    margin-bottom: 0.8rem;
+    font-size: 1.2rem;
+    color: var(--light);
+  }
+
+  .card-content p {
+    color: var(--gray);
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+
+  .btn-primary {
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
+    color: var(--light);
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 30px;
+    font-weight: 500;
+    display: inline-block;
+    transition: all 0.3s ease;
+    text-align: center;
+  }
+
+  .btn-primary:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+  }
+
+  /* 연락처 섹션 */
+  .contact {
+    background-color: var(--darker);
+    padding: 5rem 0;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .contact::after {
+    content: '';
+    position: absolute;
+    bottom: -10%;
+    left: -10%;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(138, 43, 226, 0.1) 0%, rgba(138, 43, 226, 0) 70%);
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  .contact-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 3rem;
+    flex-wrap: wrap;
+  }
+
+  .contact-card {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    padding: 2rem;
+    text-align: center;
+    width: 250px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .contact-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+
+  .contact-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+  }
+
+  .contact-icon i {
+    font-size: 1.5rem;
+    color: var(--light);
+  }
+
+  .contact-card h3 {
+    color: var(--light);
+    margin-bottom: 0.8rem;
+    font-size: 1.2rem;
+  }
+
+  .contact-card p {
+    color: var(--gray);
+  }
+
+  .contact-card a {
+    color: var(--primary);
+    transition: color 0.3s ease;
+  }
+
+  .contact-card a:hover {
+    color: var(--secondary);
+  }
+
+  /* 반응형 스타일 */
+  @media (max-width: 768px) {
+    .portfolio-grid {
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+    
+    .contact-container {
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .contact-card {
+      width: 100%;
+      max-width: 300px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .back-header .container {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    
+    .filter-container {
+      gap: 0.5rem;
+    }
+    
+    .filter-btn {
+      padding: 0.5rem 1rem;
+      font-size: 0.8rem;
+    }
+  }
