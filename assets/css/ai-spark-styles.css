@@ -136,7 +136,6 @@
   /* 네비게이션 */
   .navbar {
     position: fixed;
-    top: 50px;
     left: 0;
     width: 100%;
     padding: 1.5rem 0;
