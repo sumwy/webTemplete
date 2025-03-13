@@ -465,6 +465,25 @@ nav.scrolled .nav-links a {
     display: flex;
     align-items: center;
     gap: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.experience-tab::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: var(--gradient-bg);
+    opacity: 0;
+    transition: var(--transition);
+}
+
+.experience-tab.active::before,
+.experience-tab:hover::before {
+    opacity: 1;
 }
 
 .experience-tab.active {
@@ -478,6 +497,7 @@ nav.scrolled .nav-links a {
     transform: translateX(10px);
     box-shadow: var(--box-shadow);
     border-color: transparent;
+    background-color: rgba(255, 51, 102, 0.05);
 }
 
 .tab-icon {
@@ -491,6 +511,26 @@ nav.scrolled .nav-links a {
     font-size: 1.5rem;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     transition: var(--transition);
+    position: relative;
+    z-index: 1;
+}
+
+.tab-icon::after {
+    content: '';
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: var(--accent-color);
+    opacity: 0;
+    transition: var(--transition);
+    z-index: 2;
+}
+
+.experience-tab.active .tab-icon::after {
+    opacity: 1;
 }
 
 .experience-tab:not(.active) .tab-icon {
@@ -505,6 +545,11 @@ nav.scrolled .nav-links a {
 .tab-info h3 {
     font-size: 1.2rem;
     margin-bottom: 5px;
+    transition: var(--transition);
+}
+
+.experience-tab:hover .tab-info h3 {
+    color: var(--primary-color);
 }
 
 .tab-info p {
@@ -813,6 +858,7 @@ nav.scrolled .nav-links a {
 
 .skill-percentage {
     color: var(--gray-color);
+    font-weight: 600;
 }
 
 .skill-bar {
@@ -820,6 +866,7 @@ nav.scrolled .nav-links a {
     background-color: #f1f1f1;
     border-radius: 4px;
     overflow: hidden;
+    position: relative;
 }
 
 .skill-progress {
@@ -827,24 +874,50 @@ nav.scrolled .nav-links a {
     background: var(--gradient-bg);
     border-radius: 4px;
     position: relative;
-    transition: width 1.5s ease;
+    width: 0; /* 초기값은 0으로 설정하고 애니메이션으로 채워짐 */
+    animation: progressAnimation 1.5s ease-out forwards;
+}
+
+@keyframes progressAnimation {
+    0% { width: 0; }
+    100% { width: var(--progress-width); }
 }
 
 /* 각 스킬 프로그래스 바에 대한 기본값 설정 */
 .skill-item:nth-child(1) .skill-progress {
-    width: 95%;
+    --progress-width: 95%;
 }
 
 .skill-item:nth-child(2) .skill-progress {
-    width: 90%;
+    --progress-width: 90%;
+    animation-delay: 0.2s;
 }
 
 .skill-item:nth-child(3) .skill-progress {
-    width: 85%;
+    --progress-width: 85%;
+    animation-delay: 0.4s;
 }
 
 .skill-item:nth-child(4) .skill-progress {
-    width: 95%;
+    --progress-width: 95%;
+    animation-delay: 0.6s;
+}
+
+/* 스킬 바에 그라데이션 효과 추가 */
+.skill-progress::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
 }
 
 /* 연락처 영역 */
