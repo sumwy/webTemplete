@@ -40,7 +40,7 @@ body {
 /* 돌아가기 버튼 스타일 */
 .back-header {
     padding: 15px 20px;
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(255, 255, 255, 0.95);
     position: fixed;
     top: 0;
     left: 0;
@@ -58,11 +58,12 @@ body {
     align-items: center;
     gap: 8px;
     color: var(--primary-color);
-    font-weight: 500;
+    font-weight: 600;
     transition: var(--transition);
     padding: 8px 16px;
     border-radius: 4px;
     background-color: rgba(0, 0, 0, 0.05);
+    text-decoration: none;
 }
 
 .back-button:hover {
@@ -73,12 +74,13 @@ body {
 
 .back-button i {
     font-size: 14px;
+    margin-right: 4px;
 }
 
 .portfolio-title {
-    font-size: 18px;
     font-weight: 600;
-    color: var(--dark-color);
+    color: var(--primary-color);
+    font-size: 1.1rem;
 }
 
 h1, h2, h3, h4, h5, h6 {
