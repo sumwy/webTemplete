@@ -1,9 +1,33 @@
 // 모바일 메뉴 토글
 const mobileToggle = document.querySelector('.mobile-toggle');
 const navLinks = document.querySelector('.nav-links');
+const navLinksItems = document.querySelectorAll('.nav-links .nav-link');
 
+// 모바일 메뉴 토글 기능
 mobileToggle.addEventListener('click', function() {
     navLinks.classList.toggle('active');
+    
+    // 아이콘 변경 (메뉴/닫기)
+    const icon = mobileToggle.querySelector('i');
+    if (navLinks.classList.contains('active')) {
+        icon.classList.remove('fa-bars');
+        icon.classList.add('fa-times');
+    } else {
+        icon.classList.remove('fa-times');
+        icon.classList.add('fa-bars');
+    }
+});
+
+// 메뉴 항목 클릭 시 모바일 메뉴 닫기
+navLinksItems.forEach(item => {
+    item.addEventListener('click', function() {
+        if (window.innerWidth <= 768) {
+            navLinks.classList.remove('active');
+            const icon = mobileToggle.querySelector('i');
+            icon.classList.remove('fa-times');
+            icon.classList.add('fa-bars');
+        }
+    });
 });
 
 // 스크롤 시 헤더 스타일 변경

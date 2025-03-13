@@ -94,7 +94,7 @@
                 </div>
             </div>
             <div class="hero-image">
-                <img src="assets/images/planner_modern.png" alt="AI Spark 활용 이미지" class="hero-img">
+                <img src="assets/images/planner_modern.png" alt="AI Spark 활용 이미지" class="hero-img" loading="lazy" srcset="assets/images/planner_modern-mobile.png 480w, assets/images/planner_modern.png 800w" sizes="(max-width: 480px) 100vw, 800px">
                 <div class="floating-icons">
                     <div class="floating-icon icon-1">
                         <i class="fas fa-robot"></i>
@@ -476,7 +476,11 @@
             <span class="newsletter-tag">무료 구독</span>
             <h2 class="newsletter-title">AI 활용 노하우를 이메일로 받아보세요</h2>
             <p class="newsletter-subtitle">뉴스레터 구독자에게 제공되는 AI 프롬프트와 활용 팁을 무료로 받아보세요.</p>
-            <form class="newsletter-form" name="email-signup" method="POST" data-netlify="true">
+            <form class="newsletter-form" name="newsletter-subscription" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+                <input type="hidden" name="form-name" value="newsletter-subscription">
+                <p class="hidden" style="display:none">
+                    <label>이 필드는 작성하지 마세요: <input name="bot-field"></label>
+                </p>
                 <input type="email" name="email" required placeholder="이메일 주소를 입력하세요" class="newsletter-input">
                 <button type="submit" class="newsletter-submit">무료로 구독하기 <i class="fas fa-arrow-right"></i></button>
             </form>
@@ -527,7 +531,7 @@
                 
                 <div class="portfolio-preview animate-fadeUp animate-delay-1">
                     <div class="preview-container">
-                        <img src="assets/images/developer_modern.png" alt="포트폴리오 템플릿 미리보기" class="preview-image">
+                        <img src="assets/images/developer_modern.png" alt="포트폴리오 템플릿 미리보기" class="preview-image" loading="lazy" srcset="assets/images/developer_modern-mobile.png 480w, assets/images/developer_modern.png 800w" sizes="(max-width: 480px) 100vw, 800px">
                         <div class="preview-overlay">
                             <div class="preview-badge">
                                 <span>무료 템플릿</span>
